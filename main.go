@@ -28,6 +28,5 @@ func main() {
 	port := os.Getenv("PORT")
 
 	fmt.Println("Server dijalankan pada port ", port)
-	log.Fatal(http.ListenAndServe(port, handler))
-
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), handler))
 }
